@@ -1,0 +1,46 @@
+# Guia para Deploy de uma API na Nuvem
+
+Este documento apresenta um passo a passo básico para realizar o **deploy de uma API na nuvem**, utilizando serviços comuns de provedores como Azure, AWS ou Google Cloud.
+
+---
+
+## 1. Preparar a API para Deploy
+
+Antes de realizar o deploy, certifique-se de que:
+
+- O código da API está funcional e testado localmente.
+- O projeto possui um arquivo de configuração para dependências (ex.: `package.json`, `requirements.txt`, `pom.xml`).
+- A API está configurada para escutar a porta correta (geralmente porta 80 ou variável de ambiente).
+- O projeto possui um arquivo de configuração para variáveis de ambiente (ex.: `.env`).
+
+---
+
+## 2. Escolher o Serviço de Hospedagem na Nuvem
+
+Você pode optar por diferentes serviços para hospedar sua API:
+
+- **Azure App Service**: serviço gerenciado para aplicações web e APIs.
+- **AWS Elastic Beanstalk**: plataforma gerenciada para deploy rápido de aplicações.
+- **Google Cloud Run**: plataforma serverless para aplicações em contêiner.
+- **Serviços de Contêiner (Azure Container Instances, AWS Fargate, etc.)**: para deploy com Docker.
+
+---
+
+## 3. Configurar o Ambiente na Nuvem
+
+- Crie um recurso no seu provedor de nuvem (ex.: Web App no Azure, Elastic Beanstalk no AWS).
+- Configure variáveis de ambiente e parâmetros necessários.
+- Defina as regras de firewall, redes virtuais e escalabilidade conforme o necessário.
+
+---
+
+## 4. Realizar o Deploy
+
+### Usando Git (exemplo no Azure)
+
+1. Inicialize um repositório Git no seu projeto, se ainda não tiver:
+
+```bash
+git init
+git add .
+git commit -m "Versão inicial da API"
